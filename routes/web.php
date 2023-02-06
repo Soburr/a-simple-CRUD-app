@@ -16,14 +16,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::get('/book', function () {
     return view('book.index');
-})->middleware(['auth', 'verified'])->name('index');
+})->middleware(['auth'])->name('index');
 
-Route::resource('book', BookController::class);
+Route::resource('book', BookController::class)->middleware(['auth']);
 
 Route::get('/logout', 'App\Http\Controllers\BookController@logout');
 

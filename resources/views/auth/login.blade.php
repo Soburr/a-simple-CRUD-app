@@ -1,4 +1,4 @@
-{{-- <x-guest-layout>
+<x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -44,4 +44,12 @@
             </x-primary-button>
         </div>
     </form>
-</x-guest-layout> --}}
+
+    <a href="register">
+    <button style="color: red; border: 1px solid blue;
+     margin : 5px; padding: 10px; color: #fff;
+     background-color: rgb(53, 50, 50);">Register</button>
+</a>
+
+
+</x-guest-layout>
